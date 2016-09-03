@@ -1,27 +1,26 @@
 sudo yum install wget
+sudo yum install --nodep git
 sudo yum install vim
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 rpm -ivh epel-release-latest-7.noarch.rpm
 sudo yum install gcc
 sudo yum install python-pip
-sudo yum install python-devel
-sudo pip install -U pyvisa
+#if RHEL version 7
+wget ftp://rpmfind.net/linux/centos/7.2.1511/updates/x86_64/Packages/python-devel-2.7.5-38.el7_2.x86_64.rpm
+rpm -Uvh python-devel-2.7.5-38.el7_2.x86_64.rpm
+#if RHEL version 6
+wget ftp://rpmfind.net/linux/centos/6.8/updates/x86_64/Packages/python-devel-2.6.6-66.el6_8.x86_64.rpm
+rpm -Uvh python-devel-2.6.6-66.el6_8.x86_64.rpm
 sudo pip install pyvisa
 sudo pip install zope.interface
+sudo pip install netifaces
 sudo pip install pyvisa
-sudo pip install pyside
+sudo yum install PySide
 sudo pip install numpy
 sudo pip install pyrf
 sudo pip install pyqtgraph
 sudo pip install -e git://github.com/pyrf/qtreactor.git#egg=qtreactor
 #sudo pip install twisted
-sudo pip install qt-sdk
 sudo pip install service_identity
-sudo yum install python-pip
-sudo yum upgrade python-setuptools
-sudo yum install git
-sudo yum install libpcap -y
-sudo yum install xhost
-sudo yum install mesa-libGL-devel
 wget ftp://ftp.is.co.za/mirror/ftp.rpmforge.net/redhat/el6/en/x86_64/dag/RPMS/tcptrack-1.4.0-1.el6.rf.x86_64.rpm
 sudo rpm -Uvh tcptrack-1.4.0-1.el6.rf.x86_64.rpm 
