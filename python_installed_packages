@@ -15,7 +15,7 @@ sudo pip install pyvisa
 sudo pip install zope.interface
 sudo pip install netifaces
 sudo pip install pyvisa
-sudo yum install PySide
+sudo yum install python-pyside pyside-tools
 sudo pip install numpy
 sudo pip install pyrf
 sudo pip install pyqtgraph
